@@ -1,0 +1,47 @@
+plan_de_desarrollo_presupuesto.admin.plan_de_desarrollo_presupuesto.config:
+  path: '/presupuesto'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo_presupuesto\Form\PresupuestoForm'
+    _title: 'presupuesto Management'
+  requirements:
+    _permission: 'access crear_presupuesto'
+
+plan_de_desarrollo_presupuesto_fondos.fondos.form:
+  path: '/fondos'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo_presupuesto\Form\FondoForm'
+    _title: 'fondos form'
+  requirements:
+    _permission: 'access crear_presupuesto'
+    
+plan_de_desarrollo_presupuesto_aras.aras.form:
+  path: '/areasfuncionales'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo_presupuesto\Form\AreasFuncionalesForm'
+    _title: 'Areas'
+  requirements:
+    _permission: 'access crear_presupuesto'
+    
+plan_de_desarrollo_presupuesto_pac.pac.form:
+  path: '/pac'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo_presupuesto\Form\pacForm'
+    _title: 'pac'
+  requirements:
+    _permission: 'access crear_presupuesto'
+
+plan_de_desarrollo_presupuesto_modificacion.modificacion.form:
+  path: '/modificacion_presupusto'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo_presupuesto\Form\historicoForm'
+    _title: 'Historico presupuesto'
+  requirements:
+    _permission: 'access crear_presupuesto'
+
+plan_de_desarrollo_presupuesto_decretos.decretos.form:
+  path: '/decretos'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo_presupuesto\Form\decretosForm'
+    _title: 'Decretos decreto'
+  requirements:
+    _permission: 'access crear_presupuesto'

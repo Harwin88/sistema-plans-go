@@ -1,0 +1,19 @@
+uuid: f67163e3-06b5-4c31-bc35-8b5fba4ea1c7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_proyecto
+    - taxonomy.vocabulary.pospre
+id: taxonomy_term.pospre.field_proyecto
+field_name: field_proyecto
+entity_type: taxonomy_term
+bundle: pospre
+label: Proyecto
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

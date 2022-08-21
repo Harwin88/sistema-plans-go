@@ -1,0 +1,22 @@
+uuid: be9e6d9d-cbd1-45b0-9f2d-48e4bb55c0b0
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - theme_gobernacion
+_core:
+  default_config_hash: y0bXRvKYQQKkf_RVxA3aOPGpIfKKsDOzzrWYCgjxJ9Y
+id: theme_gobernacion_breadcrumbs
+theme: theme_gobernacion
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  label_display: '0'
+  provider: system
+visibility: {  }

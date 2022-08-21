@@ -1,0 +1,10 @@
+name: 'Gobernacion Theme'
+type: theme
+base theme: bartik
+description: 'Gobernacion'
+package: Theme General
+core: 8.x
+core_version_requirement: ^8 || ^9|| ^10
+
+libraries:
+  - theme_gobernacion/global-styling

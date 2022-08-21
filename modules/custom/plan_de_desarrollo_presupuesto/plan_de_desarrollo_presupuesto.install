@@ -1,0 +1,685 @@
+<?php
+
+/**
+ * @file
+ * Install.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function plan_de_desarrollo_presupuesto_schema() {
+  $schema = [];
+ 
+  $schema['TblPresupuestoxVigencia'] = [
+    
+    'fields' => [
+      'ConsecutivoPresupuestoxVigencia' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+
+      'ValorPresupuestoInicial' => [
+        'description' => 'valor presupuestpo inicial  ',
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+
+      'ValorPresupuestoFinal' => [
+        'description' => 'valor presupuestpo inicial  ',
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      
+      'ConsecutivoSubPrograma' => [
+        'description' => 'valor presupuestpo inicial ',
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+
+      'estado' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+
+      'created' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+      'update' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+    ],
+    'primary key' => ['ConsecutivoPresupuestoxVigencia'],
+  ];
+  
+  $schema['TblPresupuestoxVigenciaxLineaPresupuestal'] = [
+    'fields' => [
+    'ConsecutivoPresupuestoxVigenciaxLineaPresupuestal' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'Primary Key:  ConsecutivoPresupuestoxVigenciaxLineaPresupuestal.',
+      ],
+
+      'Fondo' => [
+        'description' => "Fondo",
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ],
+      
+    'estado' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+
+  'CentroGestor' => [
+        'description' => 'CentroGestor del ',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ],
+
+      'Pospre' => [
+        'description' => 'Pospre del ',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ],
+
+      'AreaFuncional' => [
+        'description' => 'Pospre del ',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ],
+      
+
+  'Proyecto' => [
+    'description' => 'NombreGobernador',
+    'type' => 'varchar',
+    'length' => 255,
+    'default' => '',
+  ],
+
+  'Valor_DecretoLiquidacion_Inicial' => [
+    'description' => 'NombreGobernador',
+    'type' => 'varchar',
+    'length' => 255,
+    'default' => '',
+  ],
+
+  'Valor_DecretoLiquidacion_Final' => [
+    'description' => 'NombreGobernador',
+    'type' => 'varchar',
+    'length' => 255,
+    'default' => '',
+  ],
+
+
+  'ConsecutivoPresupuestoxVigencia' => [
+    'description' => 'NombreGobernador',
+    'type' => 'varchar',
+    'length' => 255,
+    'default' => '',
+  ],
+
+
+  'Cpi_Sector' => [
+    'description' => 'NombreGobernador',
+    'type' => 'varchar',
+    'length' => 255,
+    'default' => '',
+  ],
+
+  'created' => [
+    'type' => 'int',
+    'unsigned' => TRUE,
+    'not null' => TRUE,
+    'default' => 0,
+    'description' => "fechacreacion evento",
+  ],
+
+  'update' => [
+    'type' => 'int',
+    'unsigned' => TRUE,
+    'not null' => TRUE,
+    'default' => 0,
+    'description' => "fechacreacion evento",
+  ],
+
+    ],
+    'primary key' => ['ConsecutivoPresupuestoxVigenciaxLineaPresupuestal'],
+  ];
+
+$schema['TblFondos'] = [
+    
+  'fields' => [
+
+    'CodFondo' => [
+      'description' => 'CodFondo',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => TRUE,
+    ],
+
+    'Fondo' => [
+      'description' => "fondo ",
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'CodVigenciaFondo' => [
+      'description' => 'NombreGobernador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'CodTipoRecurso' => [
+      'description' => 'NombreGobernador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+
+    'CodSituacionFondo' => [
+      'description' => 'NombreGobernador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'CodFuenteCUIPO' => [
+      'description' => 'NombreGobernador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+
+  'estado' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+    
+    'created' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+    'update' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+  ],
+
+  'primary key' => ['CodFondo'],
+  
+
+];
+
+
+$schema['TblAreasFuncionales'] = [
+    
+  'fields' => [
+
+    'CodAreaFuncional' => [
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ],
+
+    'DescripcionAreaFuncional' => [
+      'description' => "fondo ",
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'Estado' => [
+      'description' => 'NombreGobernador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'CodSubprograma' => [
+      'description' => 'NombreGobernador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+  'estado_register' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+    
+    'created' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+    'update' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+  ],
+
+  'primary key' => ['CodAreaFuncional'],
+  
+
+];
+
+$schema['TblPospre'] = [
+    
+  'fields' => [
+
+    'Pospre' => [
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ],
+
+    'DescripcionAreaFuncional' => [
+      'description' => "fondo ",
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'Estado' => [
+      'description' => 'NombreGobernador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'CodSubprograma' => [
+      'description' => 'NombreGobernador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+  'estado_register' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+    
+    'created' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+    'update' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+  ],
+
+  'primary key' => ['Pospre'],
+  
+
+];
+
+$schema['Tbl_Historial_Presupuestal'] = [
+    
+  'fields' => [
+
+    'ConsecutivoHistorialPresupuestal' => [
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ],
+
+    'Tipo_Movimiento' => [
+      'description' => "Tipo_Movimiento ",
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'Valor_Movimiento' => [
+      'description' => 'Valor_Movimiento',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'ConsecutivoDecreto' => [
+      'description' => 'NombreGobernador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+
+    'ConsecutivoPresupuestoxVigenciaxLineaPresupues' => [
+      'description' => 'NombreGobernador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+  'estado' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+    
+    'created' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+    'update' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+  ],
+
+  'primary key' => ['ConsecutivoHistorialPresupuestal'],
+  
+
+];
+
+$schema['TblDecretosPresupuestales'] = [
+    
+  'fields' => [
+
+    'ConsecutivoDecreto' => [
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ],
+
+    'Numero_Decreto' => [
+      'description' => "Numero_Decreto ",
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'Fecha_Decreto' => [
+      'description' => 'Fecha_Decreto',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'Observaciones' => [
+      'description' => 'Observaciones',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+
+    'AdjuntoDecreto' => [
+      'description' => 'url del archivo decreto ',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+  'estado' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+    
+    'created' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+    'update' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+  ],
+
+  'primary key' => ['ConsecutivoDecreto'],
+  
+
+];
+
+$schema['TblSubprograma_Linea_Pac'] = [
+    
+  'fields' => [
+
+    'CodDistribucionPAC' => [
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ],
+
+    'Cod_Mes' => [
+      'description' => "Cod_Mes",
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+    ],
+
+    'Valor_Programado' => [
+      'description' => 'Valor_Programado',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'Valor_Adicion' => [
+      'description' => 'Valor_Adicion',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+
+    'Valor_Programado_Real' => [
+      'description' => 'Valor_Programado_Real',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'Valor_Ejecutado' => [
+      'description' => 'Valor_Ejecutado',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'Saldo' => [
+      'description' => 'Saldo',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+
+    'Cod_Operacion' => [
+      'description' => 'Cod_Operacion',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+
+    'ConsecutivoPresupuestoxVigenciaxLineaPresupuestal' => [
+      'description' => 'ConsecutivoPresupuestoxVigenciaxLineaPresupuestal',
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+   ],
+
+  'estado' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+    
+    'created' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+    'update' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+  ],
+
+  'primary key' => ['CodDistribucionPAC'],
+  
+
+];
+
+$schema['Tbl_TiposMovimientos'] = [
+    
+  'fields' => [
+
+    'Cod_TipoMoviento' => [
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ],
+
+    'TipoMoviento' => [
+      'description' => "fondo ",
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'DescripcionMovimiento' => [
+      'description' => 'NombreGobernador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+    
+  'estado' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+    
+    'created' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+    'update' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+  ],
+
+  'primary key' => ['Cod_TipoMoviento'],
+  
+
+];
+
+
+  return $schema;
+}
+
+
+
+/**
+ * Implements hook_uninstall().
+ */
+function plan_de_desarrollo_presupuesto_uninstall() {
+  \Drupal::configFactory()->getEditable('config.settings')->delete();
+}
+
+  

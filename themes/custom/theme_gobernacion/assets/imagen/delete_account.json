@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "825ad887-fbe4-47fc-b45d-0ae036a07d41",
+		"name": "sso-back",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18283592"
+	},
+	"item": [
+		{
+			"name": "https://api.dev.tapit.com.co/v1/acount/delete",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5N2Q3ZmI1ZGNkZThjZDA0OGQzYzkxNThiNjIwYjY5MTA1MjJiNGQiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiSGFyd2luIEdhbHZpcyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQVRYQUp5WWJtb3d1R2I2NFRoQXdDQUlRNEpLTWhRVGFKaFRVcWtqT1BMaz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9yZWktaW1hZ2luaW5nLWxveWFsdHkiLCJhdWQiOiJyZWktaW1hZ2luaW5nLWxveWFsdHkiLCJhdXRoX3RpbWUiOjE2NTMwNTY2ODksInVzZXJfaWQiOiJUU0ZNcEd2YWxkZDJRNGNITTZZZnNNWUo3cEkyIiwic3ViIjoiVFNGTXBHdmFsZGQyUTRjSE02WWZzTVlKN3BJMiIsImlhdCI6MTY1MzA1NjY4OSwiZXhwIjoxNjUzMDYwMjg5LCJlbWFpbCI6Imhhcndpbi5nYWx2aXNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTUyNDYzMjQ4NTAzMjkwODIzMTciXSwiZW1haWwiOlsiaGFyd2luLmdhbHZpc0BnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJjdXN0b20ifX0.X5M00EGLidjkAMUkPaVFpABov8X9m1N2bLE3EkvGxLr2COlE0dE3o6XNdo6zM39lq-Z5uUnWVLMMI0LZRTQiDdxraAou9ipATUyod6YoNbTwAilaKiTKhIL2_Shpn2Ewfs9dTqTSD1v28QLWe9ZfRva4lDPwsuGBEpJid5LKAsfEIdwnMdLEivKnPvKZKMpM_MweR4O2uaMSrgseCPclOhDU-aqz6yTiH5BxGxnw5YueBHJdDny-htGwRSkburHWzaxs4ml3fyg0fiSG9PkytiY02yQGLT4rxhZFgW-JRfNuvVmhOAAOb5Pgiw5fkolwfPOOhLR_gbl-TMGvs3M_Mg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-appkey",
+						"value": "8207b0e12105f0591f0c9fc96e1223cfc08929a3f805b263e51f6bca7b569ed9",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"description\":\" \",\r\n\"email\": \"harwin.galvis@gmail.com\",\r\n\"reason\":{\r\n  \"The_app_fails_too_much\": \"1\",\r\n  \"I_do_not_understand_the_app\":\"1\",\r\n  \"The_market_does_not_work_for_me\":\"0\",\r\n  \"I_can_not_scan_caps\":\"0\",\r\n  \"I_can_not_redeem_points\":\"0\"\r\n},\r\n\"uid\": \"6be8fc7bdc6f484ba25373ca9682c5d7\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.dev.tapit.com.co//v1/acount/delete",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"tapit",
+						"com",
+						"co"
+					],
+					"path": [
+						"",
+						"v1",
+						"acount",
+						"delete"
+					]
+				},
+				"description": "StartFragment\n\nend point para desactivar usuarios, de firebase y guardar el motivo por el cual se retiran un usuario de la tapit.  \n  \n  \n\nEndFragment"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.dev.tapit.com.co/v1/rappi/orders",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-appkey",
+						"value": "9b7dbe26b0c966e3adccc004ea38dc19c76c775c4f2b57f0f178253a6441904f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"uid\":\"i3CGn0uPkwePSGO2hiJ0ODJQ8SM2\",\r\n    \"products\": [{\r\n                 \"nameProduct\":\"cerveza Guila\",\r\n                 \"quantity\": \"3\",\r\n                 \"price\":\"2322\",\r\n                 \"pivot\":{\r\n                     \"store_id\":\"22ererte322\",\r\n                     \"total_price\":\"26000\"\r\n                 }\r\n                 },\r\n                 {\r\n                 \"nameProduct\":\"cerveza pocker\",\r\n                 \"quantity\": \"3\",\r\n                 \"price\":\"23424\",\r\n                    \"pivot\":{\r\n                     \"store_id\":\"22eeer322\",\r\n                     \"total_price\":\"24000\"\r\n                 }\r\n                 },\r\n                 {\r\n                 \"nameProduct\":\"cerveza aguila\",\r\n                 \"quantity\": \"1\",\r\n                 \"price\":\"2500\",\r\n                    \"pivot\":{\r\n                      \"store_id\":\"22eeer322\",\r\n                     \"total_price\":\"24000\"\r\n                 }\r\n                 }],\r\n    \"stores\":[{ \r\n             \"store_id\": \"22322\",\r\n             \"stores_name\": \"rappi\",\r\n             \"stores_type\": \"licores\"\r\n        },{ \r\n             \"store_id\": \"232wwe3\",\r\n             \"stores_name\": \"rappi\",\r\n             \"stores_type\": \"licores\"\r\n        },{ \r\n             \"store_id\": \"2323\",\r\n             \"stores_name\": \"rappi\",\r\n             \"stores_type\": \"licores\"\r\n        }],\r\n    \"total_value\": \"3242233\",\r\n    \"coupon_code\": \"3242233\",\r\n    \"total_price\": \"322233\",\r\n    \"created_at\":\"28/07/2017 00:06\",\r\n    \"point\":{\r\n     \"userId\":  \"i3CGn0uPkwePSGO2hiJ0ODJQ8SM2\",\r\n     \"origin\":\"web_test_origine_test\",\r\n     \"originType\": \"cadena-del-origin-type\",\r\n     \"quantity\": 23\r\n    }\r\n   \r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.dev.tapit.com.co/v1/rappi/orders",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dev",
+						"tapit",
+						"com",
+						"co"
+					],
+					"path": [
+						"v1",
+						"rappi",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,19 @@
+uuid: 52afdf36-e083-430e-8871-a991919b000c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_objetivo_general
+    - taxonomy.vocabulary.pospre
+id: taxonomy_term.pospre.field_objetivo_general
+field_name: field_objetivo_general
+entity_type: taxonomy_term
+bundle: pospre
+label: Objetivo_General
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

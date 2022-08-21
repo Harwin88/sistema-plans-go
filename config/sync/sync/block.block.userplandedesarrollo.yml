@@ -1,0 +1,37 @@
+uuid: 4751d9ff-3d66-4f26-97d3-f8e0acf3af36
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.user-plan-de-desarrollo
+  module:
+    - system
+    - user
+  theme:
+    - theme_gobernacion
+id: userplandedesarrollo
+theme: theme_gobernacion
+region: content
+weight: -6
+provider: null
+plugin: 'system_menu_block:user-plan-de-desarrollo'
+settings:
+  id: 'system_menu_block:user-plan-de-desarrollo'
+  label: 'user plan de desarrollo'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/user/*\r\n/plandedesarrollo"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      admin_plan_: admin_plan_

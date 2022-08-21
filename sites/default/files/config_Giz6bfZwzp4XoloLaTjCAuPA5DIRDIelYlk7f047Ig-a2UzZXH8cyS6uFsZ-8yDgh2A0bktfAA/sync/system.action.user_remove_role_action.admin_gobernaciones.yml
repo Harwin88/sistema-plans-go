@@ -1,0 +1,14 @@
+uuid: 0bd44df7-72a0-453d-bc2a-0ccb726435c0
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.admin_gobernaciones
+  module:
+    - user
+id: user_remove_role_action.admin_gobernaciones
+label: 'Elimina el rol admin gobernaciones al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: admin_gobernaciones

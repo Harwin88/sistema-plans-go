@@ -1,0 +1,22 @@
+uuid: d2fc7640-1565-4513-90c7-b6f2c0084e8d
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - theme_gobernacion
+_core:
+  default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
+id: theme_gobernacion_messages
+theme: theme_gobernacion
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  label_display: '0'
+  provider: system
+visibility: {  }

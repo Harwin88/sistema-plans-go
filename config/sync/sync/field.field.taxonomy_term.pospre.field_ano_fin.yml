@@ -1,0 +1,19 @@
+uuid: 2272030f-b8a1-4a65-97b6-d7c87d63d0a7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ano_fin
+    - taxonomy.vocabulary.pospre
+id: taxonomy_term.pospre.field_ano_fin
+field_name: field_ano_fin
+entity_type: taxonomy_term
+bundle: pospre
+label: Ano_Fin
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

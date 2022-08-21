@@ -1,0 +1,11 @@
+uuid: e78be434-1df5-4081-8616-0603adf75a08
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tbl_vigencia_fondo
+id: taxonomy_term.tbl_vigencia_fondo
+target_entity_type_id: taxonomy_term
+target_bundle: tbl_vigencia_fondo
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: 6abacafe-4200-41b7-b292-df9b8f1d6087
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_pospre_nivel4
+    - taxonomy.vocabulary.fondo
+id: taxonomy_term.fondo.field_pospre_nivel4
+field_name: field_pospre_nivel4
+entity_type: taxonomy_term
+bundle: fondo
+label: Pospre_Nivel4
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

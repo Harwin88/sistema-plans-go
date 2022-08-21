@@ -1,0 +1,8 @@
+uuid: 5a067d89-d6e2-4202-9fb4-74a77d8bdd17
+langcode: es
+status: true
+dependencies: {  }
+id: user-plan-de-desarrollo
+label: 'user plan de desarrollo'
+description: 'para usuario admin'
+locked: false

@@ -1,0 +1,8 @@
+uuid: 415ed82e-cf3a-4c1b-8847-c32aa5f49ffc
+langcode: es
+status: true
+dependencies: {  }
+name: tb_centro_gestor
+vid: tb_centro_gestor
+description: centroGestor
+weight: 0

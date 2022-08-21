@@ -1,0 +1,19 @@
+uuid: 285885cd-a659-4744-af31-9169ba493353
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_codproyecto
+    - taxonomy.vocabulary.pospre
+id: taxonomy_term.pospre.field_codproyecto
+field_name: field_codproyecto
+entity_type: taxonomy_term
+bundle: pospre
+label: CodProyecto
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

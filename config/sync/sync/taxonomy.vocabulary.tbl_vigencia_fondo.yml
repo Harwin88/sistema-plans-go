@@ -1,0 +1,8 @@
+uuid: e0259897-432f-4b30-8dc2-81c38d64a105
+langcode: es
+status: true
+dependencies: {  }
+name: TBL_vigencia_fondo
+vid: tbl_vigencia_fondo
+description: 'vigencia Fondo'
+weight: 0

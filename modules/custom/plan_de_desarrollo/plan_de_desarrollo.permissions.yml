@@ -1,0 +1,15 @@
+create plan_de_desarrollo:
+  title: 'crear planes de desarrollo'
+  description: 'este rol puede crear planes de desarrollo'
+create lineas_plan:
+  title: 'crear lineas planes de desarrollo'
+  description: 'este rol puede crear lineas en planes de desarrollo'
+access plan_de_desarrollo:
+  title: 'Acceder a contenido restringido'
+  description: 'El usuario con este permiso podrá ver contenido restringido'
+access editar_lineas:
+  title: 'permiso editar lineas de planes de desarrollo'
+  description: 'editar lineas'
+access crear_presupuesto:
+  title: 'crear presupuestos'
+  description: 'crear presupuestos'

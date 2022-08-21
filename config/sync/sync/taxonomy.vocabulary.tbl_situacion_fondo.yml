@@ -1,0 +1,8 @@
+uuid: 1b450e12-7155-43fd-96fb-0dbbbeae65b4
+langcode: es
+status: true
+dependencies: {  }
+name: tbl_situacion_fondo
+vid: tbl_situacion_fondo
+description: ''
+weight: 0

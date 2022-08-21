@@ -1,0 +1,21 @@
+global-styling:
+  css:
+    component:
+      assets/css/bootstrap.min.css: { attributes: { preload: true }, preprocess: false, minified: true }
+      assets/css/style.css: { attributes: { preload: true }, preprocess: false, minified: true }
+      vendor/fontawesome-free/css/all.min.css: {}
+      css/sb-admin-2.css: {}
+      https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i: { external: true }
+      css/datatables.min.css: {}
+      vendor/datatables/dataTables.bootstrap4.css: {}
+
+  js:
+   vendor/bootstrap/js/bootstrap.bundle.min.js: {}
+   vendor/jquery-easing/jquery.easing.min.js: {}
+   js/sb-admin-2.min.js: {}
+   js/datatables.min.js: {}
+   js/app.js: {}
+  dependencies:
+    #- core/jquery.ui.accordion
+    #- core/jquery
+    #- core/drupalSettings

@@ -1,0 +1,159 @@
+uuid: c6fd4d9f-a654-4e2e-867d-ab1466a442ab
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.pospre.field_ano_fin
+    - field.field.taxonomy_term.pospre.field_ano_inicio
+    - field.field.taxonomy_term.pospre.field_codigo_bpid
+    - field.field.taxonomy_term.pospre.field_codigo_bpin_nacional
+    - field.field.taxonomy_term.pospre.field_codplaneacion
+    - field.field.taxonomy_term.pospre.field_codproyecto
+    - field.field.taxonomy_term.pospre.field_codsecretaria
+    - field.field.taxonomy_term.pospre.field_ecretaria
+    - field.field.taxonomy_term.pospre.field_estados
+    - field.field.taxonomy_term.pospre.field_fecha_corte
+    - field.field.taxonomy_term.pospre.field_objetivo_general
+    - field.field.taxonomy_term.pospre.field_proyecto
+    - field.field.taxonomy_term.pospre.field_responsable
+    - field.field.taxonomy_term.pospre.field_unidad
+    - field.field.taxonomy_term.pospre.field_version_planaccion
+    - taxonomy.vocabulary.pospre
+  module:
+    - text
+id: taxonomy_term.pospre.default
+targetEntityType: taxonomy_term
+bundle: pospre
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ano_fin:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_ano_inicio:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_codigo_bpid:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_codigo_bpin_nacional:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_codplaneacion:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_codproyecto:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_codsecretaria:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_ecretaria:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_estados:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_fecha_corte:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_objetivo_general:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_proyecto:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_responsable:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_unidad:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_version_planaccion:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+hidden:
+  langcode: true

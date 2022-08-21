@@ -1,0 +1,20 @@
+uuid: 9278de46-5791-48fb-b6c7-40e41ed35541
+langcode: es
+status: false
+dependencies:
+  theme:
+    - theme_gobernacion
+_core:
+  default_config_hash: ItFhhiUOoeR7oIq73ZaCV7PAYrOwXZ-9fazMzF5DJXM
+id: theme_gobernacion_page_title
+theme: theme_gobernacion
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  label_display: '0'
+  provider: core
+visibility: {  }

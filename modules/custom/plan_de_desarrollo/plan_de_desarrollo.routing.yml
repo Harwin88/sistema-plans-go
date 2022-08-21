@@ -1,0 +1,71 @@
+plan_de_desarrollo.admin.plan_de_desarrollo:
+  path: '/plandedesarrollo'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo\Form\PlanDeDesarrolloForm'
+    _title: 'plan Management'
+  requirements:
+    _permission: 'create plan_de_desarrollo'
+
+plan_de_desarrollo.lineas_desarrollo.lineas:
+  path: '/lineas'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo\Form\LineasForm'
+    _title: 'Plan de desarrollo Lineas'
+  requirements:
+    _permission: 'create lineas_plan'
+
+plan_de_desarrollo.editar_lineas_desarrollo.lineas:
+  path: '/lineas/editar'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo\Form\LineasForm'
+    _title: 'Plan de desarrollo Lineas'
+  requirements:
+    _permission: 'access editar_lineas'
+
+plan_de_desarrollo.sectores_lineas_desarrollo.lineas:
+  path: '/sectores'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo\Form\SectoresForm'
+    _title: 'sectores Lineas'
+  requirements:
+    _permission: 'create plan_de_desarrollo'
+
+plan_de_desarrollo.sectores_programas_desarrollo.programas:
+  path: '/programas'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo\Form\ProgramaForm'
+    _title: 'sectores Programas'
+  requirements:
+    _permission: 'create plan_de_desarrollo'
+
+plan_de_desarrollo.programas_subprogramas_desarrollo.subprogramas:
+  path: '/subprogramas'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo\Form\SubprogramaForm'
+    _title: 'sectores SubprogramaForm'
+  requirements:
+    _permission: 'create plan_de_desarrollo'
+
+plan_de_desarrollo.Metas_metas_desarrollo.metas:
+  path: '/metasproducto'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo\Form\MetasForm'
+    _title: 'sectores SubprogramaForm'
+  requirements:
+    _permission: 'create plan_de_desarrollo'
+
+plan_de_desarrollo.indicadores_desarrollo.indicadores:
+  path: '/indicadores'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo\Form\IndicadoresForm'
+    _title: 'Indicadores'
+  requirements:
+    _permission: 'create plan_de_desarrollo'
+
+plan_de_desarrollo./programas_indicadores_desarrollo.indicadores:
+  path: '/programas_indicadores'
+  defaults:
+    _form: '\Drupal\plan_de_desarrollo\Form\ProgrmacionIndicadorForm'
+    _title: 'Indicadores'
+  requirements:
+    _permission: 'create plan_de_desarrollo'

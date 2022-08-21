@@ -1,0 +1,8 @@
+uuid: 72ef0f2e-85c3-48ef-9dc3-628407fe5edd
+langcode: es
+status: true
+dependencies: {  }
+id: user-plan-de-desarrollo
+label: 'user plan de desarrollo'
+description: 'este menu es para plan de desarrollo'
+locked: false

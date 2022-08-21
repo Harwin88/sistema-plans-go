@@ -1,0 +1,11 @@
+uuid: abb7cd24-51b4-4aec-aab6-f03368c34170
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.fondo
+id: taxonomy_term.fondo
+target_entity_type_id: taxonomy_term
+target_bundle: fondo
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+<h3 class="form-title font-green">Iniciar sesión</h3>
+<div class="alert alert-danger display-hide">
+  <button class="close" data-close="alert"></button>
+  <span> Inserta tu usuario y contraseña. </span>
+</div>
+<div class="form-group">
+  {{ form.name }}
+  <div class="form-group">
+    {{ form.pass }}
+    <div class="form-actions">
+      {{ rendered }}
+    </div>
+    <div class="create-account">
+      <p>
+        <a href="/user/register" id="register-btn" class="uppercase">Registrarse</a>
+      </p>
+    </div>
+  </div>
+</div>

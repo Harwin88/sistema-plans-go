@@ -1,0 +1,21 @@
+uuid: a16d27e4-8bce-4d56-b8b0-cc9606906e7e
+langcode: es
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_pospre_nivel4
+field_name: field_pospre_nivel4
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

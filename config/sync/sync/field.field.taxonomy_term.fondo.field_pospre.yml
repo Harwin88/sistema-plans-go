@@ -1,0 +1,23 @@
+uuid: 4209ba4d-359b-4c90-bd72-1f2a3411ec24
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_pospre
+    - taxonomy.vocabulary.fondo
+id: taxonomy_term.fondo.field_pospre
+field_name: field_pospre
+entity_type: taxonomy_term
+bundle: fondo
+label: pospre
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

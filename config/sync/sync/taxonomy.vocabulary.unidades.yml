@@ -1,0 +1,8 @@
+uuid: 285049be-2282-41de-ba01-62a99ed567ce
+langcode: es
+status: true
+dependencies: {  }
+name: Unidades
+vid: unidades
+description: 'Unidades de medidas'
+weight: 0

@@ -1,0 +1,22 @@
+uuid: fb9d3882-ce8d-47d7-a11f-eaf6307b2ed8
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - theme_gobernacion
+_core:
+  default_config_hash: kigu8pTxXt1qGR2NJ5HHdC4G2G1wsDrIjLPKBT5wUBc
+id: theme_gobernacion_content
+theme: theme_gobernacion
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  label_display: '0'
+  provider: system
+visibility: {  }

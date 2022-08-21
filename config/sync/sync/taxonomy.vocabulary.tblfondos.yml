@@ -1,0 +1,8 @@
+uuid: d7fa964e-bc84-4531-9c07-8b47c0cce4b8
+langcode: es
+status: true
+dependencies: {  }
+name: TblSituacionFondo
+vid: tblfondos
+description: 'Situación Fondo'
+weight: 0

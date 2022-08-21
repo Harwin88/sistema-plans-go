@@ -1,0 +1,734 @@
+<?php
+
+/**
+ * @file
+ * Install.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function plan_de_desarrollo_schema() {
+  $schema = [];
+ 
+  $schema['TblLineas'] = [
+    
+    'fields' => [
+
+      'id_linea' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+
+      'cod_linea' => [
+        'description' => 'url de la imagenes del evento',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ],
+
+      'estado' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+
+
+      'nombre_linea' => [
+        'description' => 'url de la imagenes del evento',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ],
+
+      'id_PlanDesarrollo' => [
+        'description' => "POC to which the voucher is assigned",
+        'type' => 'int',
+        'length' => 10,
+        'not null' => TRUE,
+      ],
+
+      'created' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+
+      'update' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+    
+    ],
+ 
+    /*'foreign keys' => [
+      'fk_id_plan' => [
+        'table' => 'plan_desarrollo',
+        'columns' => ['id_PlanDesarrollo' => 'id_PlanDesarrollo'],
+        'on update' => 'cascade',
+        'on delete' => 'set null',
+      ],
+      'fk_plan_desarrollo' => [
+        'table' => 'plan_desarrollo',
+        'columns' => ['id_PlanDesarrollo' => 'id_PlanDesarrollo'],
+        'on update' => 'cascade',
+        'on delete' => 'set null',
+      ],
+    ],*/
+
+    'primary key' => ['id_linea'],
+
+    'foreign keys' => [
+      'last_comment_author' => [
+        'table' => 'Tblplandesarrollo',
+            'columns' => [
+               'id_PlanDesarrollo' => 'id',
+                    ],
+                ],
+             ],
+  ];
+  
+  $schema['Tblplandesarrollo'] = [
+    'fields' => [
+    'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key:  id.',
+      ],
+
+      'id_PlanDesarrollo' => [
+        'description' => "id_PlanDesarrollo",
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ],
+      
+    'estado' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+
+  'NombrePlanDesarrollo' => [
+        'description' => 'NombrePlanDesarrollo del ',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ],
+
+  'NombreGobernador' => [
+        'description' => 'NombreGobernador',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ],
+
+      'Cedula' => [
+        'description' => 'Cedula',
+        'type' => 'int',
+        'length' => 15,
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+
+    'Vigencia_Inicio' => [
+        'type' => 'varchar',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+        'description' => "fechacreacion evento",
+      ],
+
+      'Vigencia_Terminacion' => [
+        'type' => 'varchar',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+        'description' => "fechacreacion evento",
+      ],
+      
+      'AdjuntoPlanDesarrollo' => [
+        'description' => 'precio unitario de el product o servicio',
+        'type' => 'varchar',
+        'length' => 255,
+        'default' => '',
+      ],
+      
+      'created' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+      'update' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+    ],
+    'primary key' => ['id'],
+  ];
+
+$schema['TblSectores'] = [
+    
+  'fields' => [
+
+    'id_sector' => [
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ],
+
+    'CodSector' => [
+      'description' => 'url de la imagenes del evento',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+  'estado' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+
+    'Sector' => [
+      'description' => 'url de la imagenes del evento',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+
+    'id_linea' => [
+      'type' => 'int',
+      'not null' => TRUE
+    ],
+    
+    'created' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+    'update' => [
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+      'description' => "fechacreacion evento",
+    ],
+
+  ],
+
+  'foreign keys' => [
+    'plan_de_desarrollo' => [
+      'table' => 'TblLineas',
+      'columns' => [
+        'id_linea' => 'id_linea',
+      ],
+      'on update' => 'cascade',
+      'on delete' => 'set null',
+    ],
+  ],
+
+  'primary key' => ['id_sector'],
+  
+
+];
+
+$schema['TblProgramas'] = [
+    
+  'fields' => [
+
+    'id_programas' => [
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ],
+
+    'CodPrograma' => [
+      'description' => 'url de la imagenes del evento',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+  'estado' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+
+    'Programa' => [
+      'description' => '',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+
+
+    'Objectivo' => [
+      'description' => 'Objetivo del programao',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+
+    'id_sector' => [
+      'type' => 'int',
+      'not null' => TRUE
+    ],
+
+  'created' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+      'update' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+    
+  ],
+  'primary key' => ['id_programas'],
+
+];
+
+
+$schema['TblsubProgramas'] = [
+    
+  'fields' => [
+    'id_subprogrma' => [
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ],
+
+    'CodSubPrograma' => [
+      'description' => '',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'NombreSubPrograma' => [
+      'description' => 'Nombre del programa',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'id_programas' => [
+      'type' => 'int',
+      'not null' => TRUE
+    ],
+
+    'estado' => [
+      'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+  ],
+
+  'created' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+    'update' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+  ],
+
+
+  'primary key' => ['id_subprogrma'],
+  
+
+
+];
+$schema['TblMetasProducto'] = [
+    
+  'fields' => [
+
+    'id_meta' => [
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ],
+
+    'CodMetaProducto' => [
+      'description' => 'codigo indicador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'MetaProducto' => [
+      'description' => 'codigo indicador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'estado' => [
+      'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+  ],
+
+  'id_subprogrma' => [
+    'type' => 'int',
+    'not null' => TRUE
+  ],
+
+
+    'Tipo' => [
+      'description' => 'codigo indicador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'PesoMetas' => [
+      'description' => 'codigo indicador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'CodSecretaria' => [
+      'description' => 'codigo se cretaria',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+    
+  'created' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+    'update' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+
+    
+  ],
+  'primary key' => ['id_meta'],
+
+];
+
+$schema['TblIndicadoresProducto'] = [
+    
+  'fields' => [
+
+    'id_indicador' => [
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ],
+
+    'CodIndicadorProducto' => [
+      'description' => 'codigo indicador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'estado' => [
+      'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+  ],
+
+    'IndicadorProducto' => [
+      'description' => 'Indicadores Nombre',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'Tipo' => [
+      'type' => 'int',
+      'not null' => TRUE
+    ],
+
+    'id_meta' => [
+      'type' => 'int',
+      'not null' => TRUE
+    ],
+
+
+    'CodSecretaria' => [
+      'description' => 'codigo se cretaria',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+    
+  'created' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+    'update' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+    
+  ],
+
+  
+  'primary key' => ['id_indicador'],
+  
+
+
+];
+
+$schema['TblIProgramacionIndicadoresProducto'] = [
+    
+  'fields' => [
+
+    'id_programacion' => [
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ],
+
+    'id_indicador' => [
+      'description' => 'id del indicador',
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+    ],
+
+    'Vigencia' => [
+      'description' => 'Programacion Indicadores (unidades para cada Indicador)',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'ProgramacionIndicador' => [
+      'description' => 'Programacion Indicadores (unidades para cada Indicador)',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+
+    'UnidadMedida' => [
+      'description' => 'Unidades de medidas Para los indicadores.',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'EjecucionIndicador' => [
+      'description' => 'Indicadores Nombre',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'Avance' => [
+      'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+  ],
+
+  'urls_evidencias' => [
+    'description' => 'evidencias url de las imagenes o pdf para las evidencias',
+    'type' => 'varchar',
+    'length' => 255,
+    'default' => '',
+  ],
+
+
+    'estado' => [
+      'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+  ],
+    
+  'created' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+    'update' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+    
+  ],
+
+  
+  'primary key' => ['id_programacion'],
+  
+
+
+];
+
+
+$schema['TblPresupuestoxVigencia'] = [
+    
+  'fields' => [
+
+    'id_presupuesto_vigencia' => [
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ],
+
+    'ConsecutivoPresupuestoxVigencia' => [
+      'description' => 'codigo indicador',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'Vigencia' => [
+      'description' => '',
+      'type' => 'varchar',
+      'length' => 255,
+      'default' => '',
+    ],
+
+    'ValorPresupuestoInicial' => [
+      'description' => '',
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+    ],
+
+    'ValorPresupuestoFinal' => [
+      'description' => '',
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+    ],
+
+
+    'id_programas' => [
+      'type' => 'int',
+      'not null' => TRUE
+    ],
+
+    'estado' => [
+      'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+  ],
+    
+  'created' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+    'update' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+
+    
+  ],
+  'primary key' => ['id_presupuesto_vigencia'],
+
+];
+
+  return $schema;
+}
+
+
+
+/**
+ * Implements hook_uninstall().
+ */
+function plan_de_desarrollo_uninstall() {
+  \Drupal::configFactory()->getEditable('config.settings')->delete();
+}
+
+  

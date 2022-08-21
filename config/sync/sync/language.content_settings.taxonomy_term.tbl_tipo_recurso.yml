@@ -1,0 +1,11 @@
+uuid: 232b4e0f-c81f-458a-bd4a-80e9610ac027
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tbl_tipo_recurso
+id: taxonomy_term.tbl_tipo_recurso
+target_entity_type_id: taxonomy_term
+target_bundle: tbl_tipo_recurso
+default_langcode: site_default
+language_alterable: false

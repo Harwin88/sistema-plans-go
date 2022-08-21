@@ -1,0 +1,9 @@
+uuid: 791b85b2-76ee-4d7d-87c8-9c77a8585cfd
+langcode: es
+status: true
+dependencies: {  }
+id: admin_plan_
+label: 'Admin Plan'
+weight: 4
+is_admin: null
+permissions: {  }

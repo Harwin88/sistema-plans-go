@@ -1,0 +1,23 @@
+uuid: 68ab4aa9-7dc0-4de1-98ac-4a3f8341ff25
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_estados
+    - taxonomy.vocabulary.pospre
+id: taxonomy_term.pospre.field_estados
+field_name: field_estados
+entity_type: taxonomy_term
+bundle: pospre
+label: Estado
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

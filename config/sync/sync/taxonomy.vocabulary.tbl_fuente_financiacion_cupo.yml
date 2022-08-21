@@ -1,0 +1,8 @@
+uuid: c43984c0-7d00-4aed-bafa-ad422d4a66b1
+langcode: es
+status: true
+dependencies: {  }
+name: tbl_fuente_financiacion_CUIPO
+vid: tbl_fuente_financiacion_cupo
+description: ''
+weight: 0

@@ -1,0 +1,33 @@
+
+<div class="container">
+    <form{{ attributes }}>
+    <div class="row">
+        <div class="col-sm-8">
+        {{ element.messages }}
+       </div>
+   </div>
+   <div class="row">
+   <div class="col-sm-8">
+    <div class="row">
+      <div class="col-sm-12">{{ element.name }} {# username element #}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm"> {{ element.pass }} {# password element #}</div>
+    </div>
+  </div>
+  <div class="col-sm-4 " style="text-align: initial;">
+    {{ element.actions.submit }}
+  </div>
+  </div>
+<div>
+    <!--<div class="login-form__help_actions">
+        <input id="show_password" class="show_password" type="checkbox" />
+        <label class="password-toggle" for="show_password">Show password</label>
+        <a href="/user/password" class="forgot-password">Forgot Password?</a>
+    </div>-->
+    {{ element.form_build_id }} {# required #}
+    {{ element.form_id }} {# required #}
+</div>
+</div>
+</form>
+</div>

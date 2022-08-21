@@ -1,0 +1,17 @@
+uuid: 62e0e075-da48-4ef1-a153-ac8bdd73d9cc
+langcode: es
+status: true
+dependencies:
+  module:
+    - file
+    - plan_de_desarrollo
+id: admin_gobernaciones
+label: 'admin gobernaciones'
+weight: 4
+is_admin: null
+permissions:
+  - 'access editar_lineas'
+  - 'access files overview'
+  - 'access plan_de_desarrollo'
+  - 'create lineas_plan'
+  - 'create plan_de_desarrollo'

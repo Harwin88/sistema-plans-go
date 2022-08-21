@@ -1,0 +1,25 @@
+uuid: 1d06b61a-dabd-4e31-ae8d-2911229d549b
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - theme_gobernacion
+_core:
+  default_config_hash: d-0emr1mEq7sFKDu5RHUJckvNk62hvIZdRwPEfnJyGg
+id: theme_gobernacion_branding
+theme: theme_gobernacion
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del sitio'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

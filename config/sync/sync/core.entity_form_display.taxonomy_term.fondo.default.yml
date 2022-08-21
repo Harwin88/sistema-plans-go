@@ -1,0 +1,56 @@
+uuid: 376aef98-5dfd-4da3-9f8b-595a7fca73f9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.fondo.field_detallepospre
+    - field.field.taxonomy_term.fondo.field_pospre
+    - field.field.taxonomy_term.fondo.field_pospre_nivel4
+    - taxonomy.vocabulary.fondo
+id: taxonomy_term.fondo.default
+targetEntityType: taxonomy_term
+bundle: fondo
+mode: default
+content:
+  field_detallepospre:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_pospre:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_pospre_nivel4:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true

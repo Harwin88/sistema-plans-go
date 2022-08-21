@@ -1,0 +1,18 @@
+_core:
+  default_config_hash: IQjf_ytthngZTAk_MU8-74VecArWD3G5g0oEH6PM6GA
+langcode: es
+toolbar_items:
+  - devel.cache_clear
+  - devel.container_info.service
+  - devel.admin_settings_link
+  - devel.run_cron
+  - devel.event_info
+  - devel_php.execute_php
+  - devel.field_info_page
+  - devel_generate.generate2
+  - devel.menu_rebuild
+  - devel.reinstall
+  - devel.route_info
+  - devel.state_system_page
+  - devel.theme_registry
+  - devel.session

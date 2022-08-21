@@ -1,0 +1,8 @@
+uuid: 70f0227a-37b8-4322-ac21-ab27eed19d7e
+langcode: es
+status: true
+dependencies: {  }
+name: TBL_tipo_recurso
+vid: tbl_tipo_recurso
+description: ''
+weight: 0

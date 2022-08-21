@@ -1,0 +1,11 @@
+uuid: ba59f3d7-3c48-4326-a915-6b72b6045c36
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tblfondos
+id: taxonomy_term.tblfondos
+target_entity_type_id: taxonomy_term
+target_bundle: tblfondos
+default_langcode: site_default
+language_alterable: false

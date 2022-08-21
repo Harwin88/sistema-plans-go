@@ -1,0 +1,11 @@
+uuid: 3d647a56-a151-4036-8ab2-e080bbdf9136
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tb_centro_gestor
+id: taxonomy_term.tb_centro_gestor
+target_entity_type_id: taxonomy_term
+target_bundle: tb_centro_gestor
+default_langcode: site_default
+language_alterable: false

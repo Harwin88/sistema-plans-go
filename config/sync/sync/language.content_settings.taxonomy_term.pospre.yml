@@ -1,0 +1,11 @@
+uuid: a0c53b01-8e2a-4975-9869-00180c18a6f5
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.pospre
+id: taxonomy_term.pospre
+target_entity_type_id: taxonomy_term
+target_bundle: pospre
+default_langcode: site_default
+language_alterable: false

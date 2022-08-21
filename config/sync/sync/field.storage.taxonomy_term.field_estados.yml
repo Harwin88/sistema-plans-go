@@ -1,0 +1,18 @@
+uuid: 8e1684ae-6519-421d-87b5-a0c4320d2548
+langcode: es
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_estados
+field_name: field_estados
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

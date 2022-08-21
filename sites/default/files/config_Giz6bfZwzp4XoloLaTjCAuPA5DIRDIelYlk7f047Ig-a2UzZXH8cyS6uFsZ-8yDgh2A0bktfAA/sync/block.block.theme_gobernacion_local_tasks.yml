@@ -1,0 +1,22 @@
+uuid: 0235b0ee-3408-4252-97d1-af7101cd8e9b
+langcode: es
+status: false
+dependencies:
+  theme:
+    - theme_gobernacion
+_core:
+  default_config_hash: Qf2BoIzd9py5AYXZj8fJzCYDyVk1-AWXcu-AqQeDZKA
+id: theme_gobernacion_local_tasks
+theme: theme_gobernacion
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

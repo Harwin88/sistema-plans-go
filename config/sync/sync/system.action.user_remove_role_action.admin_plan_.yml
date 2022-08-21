@@ -1,0 +1,14 @@
+uuid: 946a94d5-2baa-4a1a-a84a-8e0d321216d8
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.admin_plan_
+  module:
+    - user
+id: user_remove_role_action.admin_plan_
+label: 'Elimina el rol Admin Plan al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: admin_plan_

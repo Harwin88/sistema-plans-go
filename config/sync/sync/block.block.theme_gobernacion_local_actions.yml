@@ -1,0 +1,20 @@
+uuid: a5f58a13-1ec0-4a0f-8ad8-1482e78653cd
+langcode: es
+status: false
+dependencies:
+  theme:
+    - theme_gobernacion
+_core:
+  default_config_hash: XRdb8LpbArVA6CpuuEZxzi50JIdjsJaCCZ5o3fH0Blk
+id: theme_gobernacion_local_actions
+theme: theme_gobernacion
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de la administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

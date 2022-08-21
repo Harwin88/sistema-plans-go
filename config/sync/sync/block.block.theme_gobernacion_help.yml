@@ -1,0 +1,22 @@
+uuid: 41f7b5c6-ff41-4708-a391-7c81441fc4a5
+langcode: es
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - theme_gobernacion
+_core:
+  default_config_hash: '-laWx8WA-ikiIEH3NJQ0hVbjqk3iEuBms91LB0B4IQU'
+id: theme_gobernacion_help
+theme: theme_gobernacion
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }
