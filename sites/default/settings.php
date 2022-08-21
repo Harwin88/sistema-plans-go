@@ -773,14 +773,27 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$databases['default']['default'] = array (
-  'database' => 'u491346729_ZeHqc',
-  'username' => 'u491346729_9leUT',
-  'password' => 'eub2dj9NM2',
-  'prefix' => 'gb5v_',
-  'host' => '127.0.0.1',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['config_sync_directory'] = 'sites/default/files/config_Giz6bfZwzp4XoloLaTjCAuPA5DIRDIelYlk7f047Ig-a2UzZXH8cyS6uFsZ-8yDgh2A0bktfAA/sync';
+
+$databases = [];
+$settings['config_sync_directory'] = '../config/sync';
+$local_settings = __DIR__ . "/settings.local.php";
+if (file_exists($local_settings)) {
+  include $local_settings;
+}
+
+
+if (getenv('LANDO') === 'ON') {
+  $lando_info = json_decode(getenv('LANDO_INFO'), TRUE);
+  $settings['trusted_host_patterns'] = ['.*'];
+  $settings['hash_salt'] = md5(getenv('LANDO_HOST_IP'));
+  $databases['default']['default'] = [
+    'driver' => 'mysql',
+    'database' => $lando_info['database']['creds']['database'],
+    'username' => $lando_info['database']['creds']['user'],
+    'password' => $lando_info['database']['creds']['password'],
+    'prefix' => 'gb5v_',
+    'host' => $lando_info['database']['internal_connection']['host'],
+    'port' => $lando_info['database']['internal_connection']['port'],
+  ];
+}
+

@@ -212,11 +212,15 @@ public static function getBtnText($edi, $delete){
         ->condition('Fondo', '%' . $search_filter . '%', 'LIKE');
         $query->condition($or);
     }
-  $or_con= $query->orConditionGroup();
+   $or_con= $query->orConditionGroup();
+   if($respu != ''){
     for($i=0; $i <= sizeof($respu); $i++){
       $or_con->condition('ConsecutivoPresupuestoxVigencia', $respu[$i]->ConsecutivoPresupuestoxVigencia, '=');
     }
-    $query->condition($or_con);
+     $query->condition($or_con);
+   }
+ 
+   
     $query->condition('estado',   1, '<>');
     $result = $query->orderBy('Fondo', 'ASC')
     ->execute();

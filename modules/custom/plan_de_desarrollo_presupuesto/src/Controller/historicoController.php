@@ -13,8 +13,6 @@ use Drupal\Core\Datetime\DrupalDateTime;
  */
 
 class historicoController extends ControllerBase {
-    
-   
    
  /**
    * Function.

@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * @file
+ * Install.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function proyectos_schema() {
+  $schema = [];
+ 
+  $schema['tblProyectos'] = [
+    
+    'fields' => [
+      'id_proyect' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+
+      'estado' => [
+        'description' => "estado del plan de desarrollo (delete: 1, Finalizado: 2, En Curso: 3 )",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+    ],
+
+      'created' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+
+      'update' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "fechacreacion evento",
+      ],
+    ],
+    'primary key' => ['id_proyect'],
+  ];
+  
+  return $schema;
+}
+
+
+
+/**
+ * Implements hook_uninstall().
+ */
+function proyectos_uninstall() {
+  \Drupal::configFactory()->getEditable('config.settings')->delete();
+}
+
+  
